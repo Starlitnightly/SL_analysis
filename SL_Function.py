@@ -55,13 +55,13 @@ class SL_Analysis(object):
         ret3= list(set(xl).intersection(SL_pd['gene1'].values))
         for i in ret3:
             ret4=list(set(ret3).intersection(SL_pd.loc[SL_pd['gene1']==i]['gene2'].values))
-        for j in ret4: 
-            SL=SL.append({'gene1':i,'gene2':j},ignore_index=True)
+            for j in ret4: 
+                SL=SL.append({'gene1':i,'gene2':j},ignore_index=True)
         ret5= list(set(xl).intersection(SL_pd['gene2'].values))
         for i in ret5:
             ret6=list(set(ret5).intersection(SL_pd.loc[SL_pd['gene2']==i]['gene1'].values))
-        for j in ret6: 
-            SL=SL.append({'gene1':j,'gene2':i},ignore_index=True)
+            for j in ret6: 
+                SL=SL.append({'gene1':j,'gene2':i},ignore_index=True)
         SL=SL.drop_duplicates(keep='first')
 
         #Drop out the same gene of SL
@@ -77,11 +77,12 @@ class SL_Analysis(object):
         #Get the result of the pair of SL
         SL_li=SL['gene1'].values.tolist()+SL['gene2'].values.tolist()
         SL_li=list(set(SL_li))
+        
         #Count
         SL_count=pd.DataFrame()
         SL_count['X']=adata.obs.dpt_pseudotime
-        for i in SL_li:
-            SL_count[i]=adata[:,i].X
+        SL_count_value=pd.DataFrame(adata[:,SL_li].X,columns=SL_li,index=adata.obs.index)
+        SL_count=pd.concat([SL_count,SL_count_value],axis=1)
         self.SL_count_sort=SL_count.sort_values(by='X')
         self.SL=SL
         return self.SL_count_sort

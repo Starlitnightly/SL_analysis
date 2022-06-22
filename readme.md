@@ -6,7 +6,8 @@ This repository contains the scripts and function to reproduce the results of SL
 
 - `SL_Function.py`: the analysis function of SL
 - `data`: the SL pair
-- `script`: the pipeline of SL analysis
+- `script`: the pipeline of SL analysis in pan-cancer
+- `crlm`: the pipeline of SL cell-cell interaction analysis in calm
 
 ## Tutorial
 

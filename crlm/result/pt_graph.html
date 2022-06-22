@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>page</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="7dbdb492940f437dae2940be175c7954" class="chart-container" style="width:400px; height:400px;"></div>
+    <script>
+        var chart_7dbdb492940f437dae2940be175c7954 = echarts.init(
+            document.getElementById('7dbdb492940f437dae2940be175c7954'), 'white', {renderer: 'canvas'});
+        var option_7dbdb492940f437dae2940be175c7954 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1000,
+                "edgeLength": 50,
+                "gravity": 0.1
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "roam": true,
+            "draggable": true,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "PT-CD45-",
+                    "symbolSize": 67.1752,
+                    "category": "PT"
+                },
+                {
+                    "name": "PT-Lymphoid-B",
+                    "symbolSize": 26.6406,
+                    "category": "PT"
+                },
+                {
+                    "name": "PT-Lymphoid-T-NK",
+                    "symbolSize": 24.238400000000002,
+                    "category": "PT"
+                },
+                {
+                    "name": "PT-MAST",
+                    "symbolSize": 27.104000000000003,
+                    "category": "PT"
+                },
+                {
+                    "name": "PT-Myeloid",
+                    "symbolSize": 62.997,
+                    "category": "PT"
+                }
+            ],
+            "categories": [
+                {
+                    "name": "PT",
+                    "itemStyle": {
+                        "normal": {
+                            "color": "red",
+                            "borderColor": "red",
+                            "borderWidth": 1.8
+                        }
+                    }
+                }
+            ],
+            "edgeLabel": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "PT-CD45-",
+                    "target": "PT-CD45-"
+                },
+                {
+                    "source": "PT-CD45-",
+                    "target": "PT-Lymphoid-B"
+                },
+                {
+                    "source": "PT-CD45-",
+                    "target": "PT-Lymphoid-T-NK"
+                },
+                {
+                    "source": "PT-CD45-",
+                    "target": "PT-MAST"
+                },
+                {
+                    "source": "PT-CD45-",
+                    "target": "PT-Myeloid"
+                },
+                {
+                    "source": "PT-Lymphoid-B",
+                    "target": "PT-Lymphoid-B"
+                },
+                {
+                    "source": "PT-Lymphoid-B",
+                    "target": "PT-Lymphoid-T-NK"
+                },
+                {
+                    "source": "PT-Lymphoid-B",
+                    "target": "PT-MAST"
+                },
+                {
+                    "source": "PT-Lymphoid-B",
+                    "target": "PT-Myeloid"
+                },
+                {
+                    "source": "PT-Lymphoid-T-NK",
+                    "target": "PT-Lymphoid-T-NK"
+                },
+                {
+                    "source": "PT-Lymphoid-T-NK",
+                    "target": "PT-MAST"
+                },
+                {
+                    "source": "PT-Lymphoid-T-NK",
+                    "target": "PT-Myeloid"
+                },
+                {
+                    "source": "PT-MAST",
+                    "target": "PT-MAST"
+                },
+                {
+                    "source": "PT-MAST",
+                    "target": "PT-Myeloid"
+                },
+                {
+                    "source": "PT-Myeloid",
+                    "target": "PT-Myeloid"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "PT"
+            ],
+            "selected": {
+                "PT": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "CRLM",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_7dbdb492940f437dae2940be175c7954.setOption(option_7dbdb492940f437dae2940be175c7954);
+    </script>
+</body>
+</html>
