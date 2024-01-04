@@ -31,7 +31,11 @@ sl_p.Lazy_analysis(['SL_count.csv'.format(cancer,trajectory),'SL_slope.csv'.form
 
 ## Data
 
-The parsed data can be downloaded in each folder.
+The parsed data can be downloaded in each folder. 
+
+## Data source
+
+Previously published scRNA-seq data reanalyzed here are available under accession codes GSE138709 (Intrahepatic cholangiocarcinoma (ICC)), PRJNA768891 (clear cell renal cell carcinoma (ccRCC)), E-MTAB-8107 (Ovary/Breast/Colorectal cancer (OC/BRCA/CRC)). The gastric cancer (GC) data were downloaded from http://dna-discovery.stanford.edu/download/1401/. We downloaded scRNA-seq of colorectal cancer liver metastases from GEO (GSE164522).
 
 ## Contact
 
